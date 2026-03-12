@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from .routers import user
+from .routers import user,auth,question
 
 app = FastAPI()
 
@@ -13,3 +13,5 @@ def health():
 
 
 app.include_router(user.router)
+app.include_router(auth.router)
+app.include_router(question.router)
